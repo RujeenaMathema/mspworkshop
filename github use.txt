@@ -1,0 +1,3 @@
+create an account at github.com
+ 
+git bash here at the folder

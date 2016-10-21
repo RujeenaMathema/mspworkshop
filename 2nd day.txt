@@ -1,0 +1,167 @@
+def change_list(mylist):
+    mylist = [1,2,3]
+    print("value inside function",mylist)
+    return
+mylist = [5,6,7]
+print("value outside the function:",mylist)
+10:58 AM 21-Oct-16
+
+--function arguments
+required arguments
+keyword arguments
+default arguments
+variable-length argument  *
+
+
+change_list() // error
+change_list([1,5])//
+
+print("------------------------------------------")
+def change_list(name, age):
+    mylist = [1,2,3]
+    print("name is",name)
+    print("age is",age)
+    return
+change_list("rujeena",19)
+change_list(19,"namrata")
+change_list(age=19, name="rujeena")
+print("------------------------------------------")
+def change_list(name, age=19):
+    mylist = [1,2,3]
+    print("name is",name)
+    print("age is",age)
+    return
+change_list("rujeena")
+change_list("namrata")
+change_list( name="rujeena")
+
+------o/p------------------------------------
+name is rujeena
+age is 19
+name is 19
+age is namrata
+name is rujeena
+age is 19
+------------------------------------------
+name is rujeena
+age is 19
+name is namrata
+age is 19
+name is rujeena
+age is 19
+
+
+def number(*argument):
+    print(argument)
+
+number(1)
+number(1,2)
+
+(1,)
+(1, 2)
+
+ ---global and local variable--
+argument = 3
+def number(*argument):
+    argument = 4
+    print("local variable",argument)
+print("global",argument)
+
+--o/p--
+global 3
+
+argument = 3
+def number(*argument):
+    argument = 4
+    print("local variable",argument)
+number()//called so loacal variable printed
+print("global",argument)
+--o/p--
+local variable 4
+global 3
+
+----module---
+import other python in another python code
+logically organize python codes
+
+import module
+>>> import math
+>>> math.cos(45)
+0.5253219888177297
+
+
+>>> import List
+--o/p--
+value outside the function: [5, 6, 7]
+value inside function [1, 2, 3]
+------------------------------------------
+name is rujeena
+age is 19
+name is 19
+age is namrata
+name is rujeena
+age is 19
+------------------------------------------
+name is rujeena
+age is 19
+name is namrata
+age is 19
+name is rujeena
+age is 19
+
+
+dir(module)--sorting strings inside the modules
+
+>>> dir()
+['List', '__builtins__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', 'argument', 'math', 'number']
+>>> dir(math)
+['__doc__', '__loader__', '__name__', '__package__', '__spec__', 'acos', 'acosh', 'asin', 'asinh', 'atan', 'atan2', 'atanh', 'ceil', 'copysign', 'cos', 'cosh', 'degrees', 'e', 'erf', 'erfc', 'exp', 'expm1', 'fabs', 'factorial', 'floor', 'fmod', 'frexp', 'fsum', 'gamma', 'gcd', 'hypot', 'inf', 'isclose', 'isfinite', 'isinf', 'isnan', 'ldexp', 'lgamma', 'log', 'log10', 'log1p', 'log2', 'modf', 'nan', 'pi', 'pow', 'radians', 'sin', 'sinh', 'sqrt', 'tan', 'tanh', 'trunc']
+>>> dir(list)
+['__add__', '__class__', '__contains__', '__delattr__', '__delitem__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__gt__', '__hash__', '__iadd__', '__imul__', '__init__', '__iter__', '__le__', '__len__', '__lt__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__', '__rmul__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__', 'append', 'clear', 'copy', 'count', 'extend', 'index', 'insert', 'pop', 'remove', 'reverse', 'sort']
+>>> dit(List)
+Traceback (most recent call last):
+  File "<pyshell#10>", line 1, in <module>
+    dit(List)
+NameError: name 'dit' is not defined
+>>> dir(List)
+['__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', 'change_list', 'mylist']
+
+--builtins---
+>>> import builtins
+>>> dir(builtins)
+['ArithmeticError', 'AssertionError', 'AttributeError', 'BaseException', 'BlockingIOError', 'BrokenPipeError', 'BufferError', 'BytesWarning', 'ChildProcessError', 'ConnectionAbortedError', 'ConnectionError', 'ConnectionRefusedError', 'ConnectionResetError', 'DeprecationWarning', 'EOFError', 'Ellipsis', 'EnvironmentError', 'Exception', 'False', 'FileExistsError', 'FileNotFoundError', 'FloatingPointError', 'FutureWarning', 'GeneratorExit', 'IOError', 'ImportError', 'ImportWarning', 'IndentationError', 'IndexError', 'InterruptedError', 'IsADirectoryError', 'KeyError', 'KeyboardInterrupt', 'LookupError', 'MemoryError', 'NameError', 'None', 'NotADirectoryError', 'NotImplemented', 'NotImplementedError', 'OSError', 'OverflowError', 'PendingDeprecationWarning', 'PermissionError', 'ProcessLookupError', 'RecursionError', 'ReferenceError', 'ResourceWarning', 'RuntimeError', 'RuntimeWarning', 'StopAsyncIteration', 'StopIteration', 'SyntaxError', 'SyntaxWarning', 'SystemError', 'SystemExit', 'TabError', 'TimeoutError', 'True', 'TypeError', 'UnboundLocalError', 'UnicodeDecodeError', 'UnicodeEncodeError', 'UnicodeError', 'UnicodeTranslateError', 'UnicodeWarning', 'UserWarning', 'ValueError', 'Warning', 'WindowsError', 'ZeroDivisionError', '_', '__build_class__', '__debug__', '__doc__', '__import__', '__loader__', '__name__', '__package__', '__spec__', 'abs', 'all', 'any', 'ascii', 'bin', 'bool', 'bytearray', 'bytes', 'callable', 'chr', 'classmethod', 'compile', 'complex', 'copyright', 'credits', 'delattr', 'dict', 'dir', 'divmod', 'enumerate', 'eval', 'exec', 'exit', 'filter', 'float', 'format', 'frozenset', 'getattr', 'globals', 'hasattr', 'hash', 'help', 'hex', 'id', 'input', 'int', 'isinstance', 'issubclass', 'iter', 'len', 'license', 'list', 'locals', 'map', 'max', 'memoryview', 'min', 'next', 'object', 'oct', 'open', 'ord', 'pow', 'print', 'property', 'quit', 'range', 'repr', 'reversed', 'round', 'set', 'setattr', 'slice', 'sorted', 'staticmethod', 'str', 'sum', 'super', 'tuple', 'type', 'vars', 'zip']
+
+
+---comments type--
+single line comment #
+multiple line comment """___"""
+
+for hangman---
+http://bit.ly/2eMWFoT
+
+cmd
+	pip
+
+1. create a new folder
+2. open in cmd
+
+open new file in that folder
+
+pip search requests
+
+pip install requests
+--i.e.installing modules
+import requests //module name
+request = requests.get("https://google.com")
+print(request)
+in cmd--python first.py
+<Response [200]>.. response ok
+
+import requests
+request = requests.get("https://google.com")
+print(request)
+if request.status_code == 200:
+	print("Page loaded succesfully")
+else:
+	print("There was an error loading page")
+	
